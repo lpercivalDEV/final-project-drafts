@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Gentrification AI - Mitigation Tool</title>
+  <link rel="stylesheet" href="font-awesome.min.css">
+  <link rel="stylesheet" href="public/css/styles.css">
+</head>
+<body>
+  <h1>Gentrification AI - Mitigation Tool</h1>
+
+  <h2>About</h2>
+  <p></p>
+
+  <h2>Data Sets</h2>
+  <ul>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+  </ul>
+
+<h2>Supported Cities</h2>
+    <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+
+<h2>Contact</h2>
+<p></p>
+
+
+<h2>Sample Results</h2>
+
+<h3>Dorchester</h3>
+<h2>RISK RATING GOES HERE  - #%</h2>
+<img src="" alt="chart">
+<table>
+    <tr>
+        <td>1</td>
+        <td>Data break down goes in here</td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td>and here</td>
+    </tr>
+    <tr>
+        <td>3</td>
+        <td>and here</td>
+    </tr>
+</table>
+
+<h4>Detailed Risk Breakdown</h4>
+  <ul class="messages">
+  <% for(var i=0; i<messages.length; i++) {%>
+    <li class="message">
+      <span><%= messages[i].factor1 %></span>
+    </li>
+    <li>
+        <span><%= messages[i].factor2 %></span>
+    </li>
+    <li>
+        <span><%= messages[i].factor3 %></span>
+    </li>
+    <li>
+        <span><%= messages[i].factor4 %></span>
+    </li>
+    <li>
+        <span><%= messages[i].factor5 %></span>
+    </li>
+    <li>
+        <span><%= messages[i].risk %></span>
+    </li>
+  <% } %>
+  </ul>
+
+  <h2 class="formSubmit">Enter City</h2>
+
+  <form action="/messages" method="POST">
+    <input type="text" placeholder="Enter city..." name="city">
+    <input type="text" placeholder="Enter State..." name="state">
+    <button type="submit">Submit</button>
+  </form>
+
+  <script src="public/js/main.js"></script>
+
+</body>
+</html>
