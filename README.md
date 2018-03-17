@@ -4,7 +4,7 @@ This is a repo containing my draft work for my final project.
 
 I will be using machine learning to solve social issues.
 
-![alt tag]()
+![alt tag](https://github.com/lpercivalDEV/final-project-drafts-WIP/blob/master/fpWireframe6.png)
 
 
 
