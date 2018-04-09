@@ -2,24 +2,26 @@
 <html>
 <head>
     <title>Gente AI</title>
-    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+    <!-- <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="profile.css">
+    <!-- <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css"> -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <div class="container">
 
     <div class="page-header text-center">
-        <h1><span class="fa fa-anchor"></span> Profile Page</h1>
+        <h1><span class="fas fa-globe"></span> Profile Page</h1>
         <a href="/logout" class="btn btn-default btn-sm">Logout</a>
     </div>
 
     <div class="row">
 
         <!-- LOCAL INFORMATION -->
-        <div class="col-sm-6">
+        <div class="col-sm-3">
             <div class="well">
-                <h3><span class="fa fa-user"></span> Local</h3>
+                <h3><span class="fa fa-user"></span> User Info</h3>
 
                 <% if (user.local.email) { %>
                     <p>
@@ -28,19 +30,18 @@
                         <strong>password</strong>: <%= user.local.password %>
                     </p>
 
-                    <a href="/unlink/local" class="btn btn-default">Unlink</a>
+                    <a href="/unlink/local" class="btn btn-default">Delete Account</a>
                 <% } else { %>
                     <a href="/connect/local" class="btn btn-default">Connect Local</a>
                 <% } %>
 
             </div>
         </div>
-        <div class="col-sm-6">
-          <h3>Locations</h3>
+        <div class="col-sm-8">
+          <h3>Saved Locations</h3>
           <ul class="messages">
           <% for(var i=0; i<messages.length; i++) {%>
             <li class="message">
-              <span><%= messages[i].name %></span>
               <span><%= messages[i].msg %></span>
               <span><%= messages[i].thumbUp %></span>
               <span><i class="fa fa-thumbs-up" aria-hidden="true"></i></span>
@@ -57,12 +58,48 @@
             <input type="text" placeholder="message" name="msg">
             <button type="submit">Submit</button>
           </form>
+
+         
+
+          <section class="rcs">
+              <div class="gov">
+                  <li><a href="https://malegislature.gov/Search/FindMyLegislator">Find Your Legislator</a></li>
+              </div>
+              <div class="housing">
+                  <p>Here is a list of federal and MA state housing resources</p>
+                  <ul>
+                      <li><a href="https://www.hud.gov/federal_housing_administration">HUD</a></li>
+                      <li><a href="https://www.usa.gov/housing">USA.gov General Housing Links</a></li>
+                      <li><a href="https://www.usa.gov/finding-home">Affordable Housing</a></li>
+                      <li><a href="https://www.usa.gov/housing-help-audiences">Housing Help Links</a></li>
+                      <li><a href="http://www.bostonhousing.org/en/Home.aspx">Boston Housing Authority</a></li>
+                      <li><a href="https://www.mass.gov/orgs/housing-and-community-development">Department of Housing and Community Development</a></li>
+                      <li><a href="https://www.mass.gov/service-details/a-guide-to-obtaining-housing-assistance">A Guide for Obtaining Housing Assistance</a></li>
+                      <li><a href="http://www.bphc.org/whatwedo/homelessness/emergency-shelter-commission/Pages/Shelters.aspx">Boston Public Health Commission - List of MA Homeless Shelters</a></li>
+                      <li><a href="https://www.va.gov/HOMELESS/housing.asp">Homeless Veterans</a></li>
+                      <li><a href="https://www.hud.gov/program_offices/public_indian_housing/pha/contacts/ma">Public Housing Contact Information</a></li>
+                  </ul>
+              </div>
+              <div class="orgs">
+                  <li><a href="https://affordablehousingonline.com/housing-search/Massachusetts">Affordable Housing Online</a></li>
+                  <li><a href="http://www.sectioneightapplication.com/apply/MA">Section Eight Application Guide</a></li>
+                  <li><a href="https://www.mhp.net">MA Housing Partnership</a></li>
+                  <li><a href="http://www.massaccesshousingregistry.org">Mass Access</a></li>
+                  <li><a href="https://www.shelterlistings.org/state/massachusetts.html">Shelter Listings - MA</a></li>
+                  <li><a href="https://www.homelessshelterdirectory.org/massachusetts.html">Homeless Shelter Directory</a></li>
+                  <li><a href="https://housingfamilies.org/resources/need-shelter/">Housing Families</a></li>
+                  <li><a href="http://mahomeless.org/individual-shelters-in-western-massachusetts">MA Coalition for the Homeless - Individual Shelters</a></li>
+
+              </div>
+          </section>
+
         </div>
         <% } %>
-
 </div>
 
 <script src="main.js"></script>
+<script src="profile.js"></script>
+
 
 </body>
 </html>
